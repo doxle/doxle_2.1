@@ -1,0 +1,17 @@
+[workspace]
+members = [
+  "doxle-core",
+  "bevy-app",
+  "dioxus-app",
+  "web-app"
+]
+resolver = "2"
+
+[workspace.dependencies]
+dioxus = { version = "0.7.0-rc.0", features = ["document"] }
+dioxus-native = "0.7.0-rc.0"
+doxle_core = { path = "./doxle-core" }
+wgpu = "24.0"
+bevy = { version = "0.16", default-features = false, features = ["bevy_render", "bevy_winit", "bevy_core_pipeline", "bevy_pbr"] }
+color = "0.3"
+tracing-subscriber = "0.3.19"

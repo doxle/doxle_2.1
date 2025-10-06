@@ -1,0 +1,19 @@
+[package]
+name = "dioxus-app"
+version = "0.1.0"
+edition = "2024"
+
+[features]
+default = ["desktop"]
+desktop = ["dioxus/desktop"]
+native = ["dioxus/native"]
+tracing = ["dep:tracing-subscriber", "dioxus-native/tracing"]
+
+[dependencies]
+dioxus = { workspace = true }
+dioxus-native = { workspace = true }
+doxle_core = { workspace = true }
+wgpu = { workspace = true }
+bevy = { workspace = true }
+color = { workspace = true }
+tracing-subscriber = { workspace = true, optional = true }
