@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [features]
-default = ["desktop"]
+default = ["native"]
 desktop = ["dioxus/desktop"]
 native = ["dioxus/native"]
 tracing = ["dep:tracing-subscriber", "dioxus-native/tracing"]
@@ -17,3 +17,10 @@ wgpu = { workspace = true }
 bevy = { workspace = true }
 color = { workspace = true }
 tracing-subscriber = { workspace = true, optional = true }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+cocoa = "0.25"
+objc = "0.2"
+dispatch = "0.2"
+winit = "0.30"
+image = { version = "0.25.8", features = ["png"] }

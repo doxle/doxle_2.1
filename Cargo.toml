@@ -1,7 +1,6 @@
 [workspace]
 members = [
   "doxle-core",
-  "bevy-app",
   "dioxus-app",
   "web-app"
 ]
